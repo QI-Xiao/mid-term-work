@@ -17,9 +17,6 @@ def get_url(i, reqHeader):
 # 下载图片
 def save_content(j, reqHeader):
     picGet = requests.get('http:' + j, headers=reqHeader)
-    direxist = os.path.isdir('picture')
-    if not direxist:
-        os.mkdir('picture')
     piclocal = r'picture\%s' % str(j.split('/')[-1])
     with open(piclocal, 'wb') as f:
         f.write(picGet.content)
@@ -37,6 +34,11 @@ if __name__ == '__main__':
 
     threads = []
     files = range(len(temperary_save))
+
+    direxist = os.path.isdir('picture')
+    if not direxist:
+        os.mkdir('picture')
+
     for i in files:  # 创建线程
         t = threading.Thread(target=save_content, args=(temperary_save[i],reqHeader))
         threads.append(t)
