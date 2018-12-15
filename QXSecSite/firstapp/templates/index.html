@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    Django Index Page
+    <table>
+        <tr>
+            <td>td1</td>
+            <td>demo</td>
+        </tr>
+        {% for message in messages %}
+        <tr>
+            <td>{{ message.name }}</td>
+            <td>{{ message.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
