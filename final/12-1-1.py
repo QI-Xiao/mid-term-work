@@ -20,6 +20,7 @@ def save_content(j, reqHeader):
     piclocal = r'picture\%s' % str(j.split('/')[-1])
     with open(piclocal, 'wb') as f:
         f.write(picGet.content)
+    print ('%s 下载完成' % j.split('/')[-1])
 
 
 if __name__ == '__main__':
@@ -46,6 +47,4 @@ if __name__ == '__main__':
         threads[i].start()
     for i in files:
         threads[i].join()
-        # print('%s 下载完成' % temperary_save[i].split('/')[-1])
-        # 这里应该不能print，没有找到一个线程结束后print的方法
     print('结束下载')

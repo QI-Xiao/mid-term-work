@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<form action="/action_page.php">
+first name:<br>
+<input type="text" name="firstname" value="fdsaf">
+<br>
+last name:<br>
+<input type="text" name="lastname" value="dfsd">
+<br>
+<input type="submit" value="sss">
+</form>
+
+<form>
+<input type="radio" name="gender" value="male" >male<br>
+<input type="radio" name="gender" value="female" checked>female<br>
+<input type="radio" name="gender" value="other">other<br>
+</form>
+
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend>personal information:</legend>
+first name:<br />
+<input type="text" name="firstname" value="mickey"><br />
+last name:<br />
+<input type="text" name="lastname" value="mouse"><br /><br />
+<input type="submit" value="submit">
+</fieldset>
+</form>
+
+<form>
+<select name="cars" multiple>
+<option value="volvo">volvo</option>
+<option value="saab" selected>saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+<br /><br />
+<input type="submit">
+</form>
+<br />
+
+<form action="/action_page.php">
+<textarea name="message" style="width:200px; height:200px;">the car was playing in the gardon</textarea>
+<br />
+<input type="submit">
+</form>
+
+<button type="button" onclick="alert('hello world!')">click me!</button>
+
+<form>
+<input list="browsers">
+<datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+</datalist>
+<input type="submit">
+</form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+0
+<input type="range" id="a" name="a" value="50">
+100 +
+<input type="number" id="b" name="b" value="50">
+=
+<output name="x" for="a b"></output>
+<br />
+<input type="submit">
+<input type="reset">
+</form>
+
+<form>
+<input type="checkbox" name="vehicle1" value="bike">i have a bike<br />
+<input type="checkbox" name="vehicle2" value="Car"> I have a car 
+</form>
+
+<form action="/action_page.php">
+  Select your favorite color:
+  <input type="color" name="favcolor" value="#ff0000"><br />
+  Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br>
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br>
+  <input type="submit">
+  
+<form action="/action_page.php" id="form1">
+First name: <input type="text" name="fname"><br>
+<input type="submit" value="Submit">
+</form>
+<p>The "Last name" field below is outside the form element, but still part of the form.</p>
+Last name: <input type="text" name="lname" form="form1">
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function myFunction()
+{
+try
+{
+var x=document.getElementById("demo").value;
+if(x=="") throw "emply"
+if(isNaN(x)) throw "not number"
+if(x>10) throw "too big"
+if(x<5) throw "too small"
+}
+catch(err)
+{
+var y=document.getElementById("mess");
+y.innerHTML="error:"+err+".";
+}
+}
+</script>
+
+<p>input number between 5-10.</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">input</button>
+<p id="mess"></p>
+
+</body>
+</html>

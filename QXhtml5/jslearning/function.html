@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction()
+{
+alert("hello world");
+}
+</script>
+
+<script>
+function mysecFunction(name,job)
+{
+alert("welcom "+name+", the "+job);
+}
+</script>
+</head>
+
+<body>
+<button onclick="mysecFunction('Bill','ceo')">press</button>
+<br />
+<br />
+<button onclick="myFunction()">press</button>
+<p id="demo"></p>
+
+<script>
+function mythirdFunction(a,b)
+{
+return a*b;
+}
+document.getElementById("demo").innerHTML=mythirdFunction(4,3);
+</script>
+
+</body>
+</html>

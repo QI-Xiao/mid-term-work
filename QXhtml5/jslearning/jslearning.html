@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="myScript.js"></script>
+</head>
+
+<body>
+
+<script>
+document.write("<h1>this is a heading</h1>");
+document.write("<p>this is a paragraph</p>");
+</script>
+
+<button type="button" onclick="alert('welcome!')">press this</button>
+
+<p id="demo">javascript changed</p>
+
+<button type="button" onclick="myFunction()">press 1</button>
+
+<p id="demoaa">javascript changed</p>
+<script>
+function myfirstFunction()
+{
+x=document.getElementById("demoaa")
+x.style.color="#ff0000";
+}
+</script>
+<button type="button" onclick="myfirstFunction()">press 2</button>
+
+<input id="demo3" type="text">
+<script>
+function mysecFunction()
+{
+var x=document.getElementById("demo3").value;
+if(x==""||isNaN(x))
+		{
+		alert("not numeric");
+		}
+}
+</script>
+<button type="button" onclick="mysecFunction()">press number!</button>
+
+</body>
+</html>
